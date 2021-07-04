@@ -83,6 +83,21 @@ namespace MyTinySTL
 
             list6.reverse();
             Print_List("after reverse", list6);
+
+            std::cout << "max_size(): " << list6.max_size() << std::endl;
+#if PERFORMANCE_TEST_ON
+            std::cout << "[--------------------- Performance Testing ---------------------]" << std::endl;
+            std::cout << "|---------------------|-------------|-------------|-------------|" << std::endl;
+            std::cout << "|       insert        |";
+#if LARGER_TEST_DATA_ON
+            CON_TEST_P2(list<int>, insert, end, rand(), LEN1 _L, LEN2 _L, LEN3 _L);
+#else
+            CON_TEST_P2(list<int>, insert, end, rand(), LEN1 _M, LEN2 _M, LEN3 _M);
+#endif
+            std::cout << std::endl;
+            std::cout << "|---------------------|-------------|-------------|-------------|" << std::endl;
+            PASSED;
+#endif
         }
     }
 }

@@ -8,23 +8,23 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug"/>
+				<Option working_dir="C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="stltest">
-				<Option output="C:/extralfiles/github/Review-tree/MyTinySTL/Test/bin/stltest.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/extralfiles/github/Review-tree/MyTinySTL/Test/bin"/>
+				<Option output="C:/extralfiles/github/MyTinySTL/Test/bin/stltest.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/extralfiles/github/MyTinySTL/Test/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/extralfiles/github/Review-tree/MyTinySTL/Test/../MyTinySTL"/>
+					<Add directory="C:/extralfiles/github/MyTinySTL/Test/../MyTinySTL"/>
 					<Add directory="C:/extralfiles/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/extralfiles/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/extralfiles/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -33,20 +33,20 @@
 					<Add directory="C:/extralfiles/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 stltest"/>
-					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 stltest"/>
+					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="stltest/fast">
-				<Option output="C:/extralfiles/github/Review-tree/MyTinySTL/Test/bin/stltest.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/extralfiles/github/Review-tree/MyTinySTL/Test/bin"/>
+				<Option output="C:/extralfiles/github/MyTinySTL/Test/bin/stltest.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/extralfiles/github/MyTinySTL/Test/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/extralfiles/github/Review-tree/MyTinySTL/Test/../MyTinySTL"/>
+					<Add directory="C:/extralfiles/github/MyTinySTL/Test/../MyTinySTL"/>
 					<Add directory="C:/extralfiles/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/extralfiles/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/extralfiles/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -55,64 +55,64 @@
 					<Add directory="C:/extralfiles/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 stltest/fast"/>
-					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 stltest/fast"/>
+					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug"/>
+				<Option working_dir="C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug"/>
+				<Option working_dir="C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/extralfiles/mingw64/bin/mingw32-make.exe -f &quot;C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/deque_test.h">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/deque_test.h">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/list_test.h">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/list_test.h">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/map_test.h">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/map_test.h">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/queue_test.h">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/queue_test.h">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/rb_tree_test.h">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/rb_tree_test.h">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/set_test.h">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/set_test.h">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/stack_test.h">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/stack_test.h">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/test.cpp">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/test.cpp">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/test.h">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/test.h">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/vector_test.h">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/vector_test.h">
 			<Option target="stltest"/>
 		</Unit>
-		<Unit filename="C:/extralfiles/github/Review-tree/MyTinySTL/Test/CMakeLists.txt">
+		<Unit filename="C:/extralfiles/github/MyTinySTL/Test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

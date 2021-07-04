@@ -263,6 +263,8 @@ namespace MyTinySTL
             return tmp;
         }
 
+       // bool operator==(const _rb_tree_iterator& rhs) { return node == rhs.node; }
+       // bool operator!=(const _rb_tree_iterator& rhs) { return node != rhs.node; }
     };
 
     template <class T>
@@ -457,6 +459,8 @@ namespace MyTinySTL
 
        bool empty() const { return node_count == 0; }
        size_type size() const { return node_count; }
+       size_type max_size() const
+       { return static_cast<size_type>(-1) / sizeof(T); }
 
        template <class ...Args>
        iterator emplace_multi(Args&& ...args);
@@ -471,12 +475,12 @@ namespace MyTinySTL
 
         iterator insert_multi(const value_type& value);
         iterator insert_multi(value_type&& value)
-        { emplace_multi(MyTinySTL::move(value)); }
+        { return emplace_multi(MyTinySTL::move(value)); }
 
         iterator insert_multi(iterator pos, const value_type& value)
-        { emplace_multi_at_pos(pos, value); }
+        { return emplace_multi_at_pos(pos, value); }
         iterator insert_multi(iterator pos, value_type&& value)
-        { emplace_multi_at_pos(pos, MyTinySTL::move(value)); }
+        { return emplace_multi_at_pos(pos, MyTinySTL::move(value)); }
 
         template <class Iter>
         iterator insert_multi(Iter first, Iter last) {
@@ -989,6 +993,7 @@ namespace MyTinySTL
             node_count = rhs.node_count;
             key_compare = rhs.key_compare;
         }
+        return *this;
    }
 
     template <class T, class Compare>
@@ -998,6 +1003,7 @@ namespace MyTinySTL
         node_count = rhs.node_count;
         key_compare = rhs.key_compare;
         rhs.reset();
+        return *this;
     }
 
 
@@ -1234,10 +1240,10 @@ namespace MyTinySTL
     template <class T, class Compare>
     typename rb_tree<T, Compare>::size_type
     rb_tree<T, Compare>::erase_unique(const key_type &key) {
-        auto it = find(key);
-        if (it != nullptr) {
+        iterator it = find(key);
+        if (it != end()) {
             erase(it);
-            return;
+            return 1;
         }
         return 0;
     }
@@ -1261,7 +1267,6 @@ namespace MyTinySTL
         auto y = header;
         auto x = root();
         while (x != nullptr) {
-           // std::cout << value_traits::get_key(static_cast<node_ptr>(x)->value) << key << std::endl;
             if (!key_compare(value_traits::get_key(static_cast<node_ptr>(x)->value), key)) {
                 y = x;
                 x = x->left;
@@ -1359,6 +1364,50 @@ namespace MyTinySTL
             }
         }
         return const_iterator(y);
+    }
+
+    // 重载比较操作符
+    template <class T, class Compare>
+    bool operator==(const rb_tree<T, Compare>& lhs, const rb_tree<T, Compare>& rhs)
+    {
+        return lhs.size() == rhs.size() && MyTinySTL::equal(lhs.begin(), lhs.end(), rhs.begin());
+    }
+
+    template <class T, class Compare>
+    bool operator<(const rb_tree<T, Compare>& lhs, const rb_tree<T, Compare>& rhs)
+    {
+        return MyTinySTL::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
+    }
+
+    template <class T, class Compare>
+    bool operator!=(const rb_tree<T, Compare>& lhs, const rb_tree<T, Compare>& rhs)
+    {
+        return !(lhs == rhs);
+    }
+
+    template <class T, class Compare>
+    bool operator>(const rb_tree<T, Compare>& lhs, const rb_tree<T, Compare>& rhs)
+    {
+        return rhs < lhs;
+    }
+
+    template <class T, class Compare>
+    bool operator<=(const rb_tree<T, Compare>& lhs, const rb_tree<T, Compare>& rhs)
+    {
+        return !(rhs < lhs);
+    }
+
+    template <class T, class Compare>
+    bool operator>=(const rb_tree<T, Compare>& lhs, const rb_tree<T, Compare>& rhs)
+    {
+        return !(lhs < rhs);
+    }
+
+
+    template <class T, class Compare>
+    void swap(rb_tree<T, Compare>& lhs, rb_tree<T, Compare>& rhs) noexcept
+    {
+        lhs.swap(rhs);
     }
 }
 

@@ -73,6 +73,29 @@ namespace MyTinySTL
             Print("after erase pos[1]: ", qu3);
             qu3.erase(qu3.begin(), qu3.begin() + 10);
             Print("after erase pos[1] - pos[10]: ", qu3);
+
+            std::cout << "max_size(): " << qu.max_size() << std::endl;
+#if PERFORMANCE_TEST_ON
+            std::cout << "[--------------------- Performance Testing ---------------------]" << std::endl;
+            std::cout << "|---------------------|-------------|-------------|-------------|" << std::endl;
+            std::cout << "|     push_front      |";
+#if LARGER_TEST_DATA_ON
+            CON_TEST_P1(deque<int>, push_front, rand(), LEN1 _LL, LEN2 _LL, LEN3 _LL);
+#else
+            CON_TEST_P1(deque<int>, push_front, rand(), LEN1 _L, LEN2 _L, LEN3 _L);
+#endif
+            std::cout << std::endl;
+            std::cout << "|---------------------|-------------|-------------|-------------|" << std::endl;
+            std::cout << "|     push_back       |";
+#if LARGER_TEST_DATA_ON
+            CON_TEST_P1(deque<int>, push_back, rand(), LEN1 _LL, LEN2 _LL, LEN3 _LL);
+#else
+            CON_TEST_P1(deque<int>, push_back, rand(), LEN1 _L, LEN2 _L, LEN3 _L);
+#endif
+            std::cout << std::endl;
+            std::cout << "|---------------------|-------------|-------------|-------------|" << std::endl;
+            PASSED;
+#endif
         }
     }
 }

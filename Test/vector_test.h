@@ -85,6 +85,20 @@ namespace MyTinySTL
             std::cout<< "after erase :";
             Print_Vector(tmp6);
 
+            std::cout << "max_size(): " << tmp6.max_size() << std::endl;
+#if PERFORMANCE_TEST_ON
+            std::cout << "[--------------------- Performance Testing ---------------------]\n";
+            std::cout << "|---------------------|-------------|-------------|-------------|\n";
+            std::cout << "|      push_back      |";
+#if LARGER_TEST_DATA_ON
+            CON_TEST_P1(vector<int>, push_back, rand(), LEN1 _LL, LEN2 _LL, LEN3 _LL);
+#else
+            CON_TEST_P1(vector<int>, push_back, rand(), LEN1 _L, LEN2 _L, LEN3 _L);
+#endif
+            std::cout << "\n";
+            std::cout << "|---------------------|-------------|-------------|-------------|\n";
+            PASSED;
+#endif
         }
     }
 }

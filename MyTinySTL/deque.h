@@ -274,6 +274,9 @@ namespace MyTinySTL
             size_type size() const
             {return _end - _begin; }
 
+            size_type max_size() const
+            { return static_cast<size_type>(-1); }
+
             reference front()
             { return *begin(); }
 
@@ -480,10 +483,10 @@ namespace MyTinySTL
             map_pointer mid = begin + old_map_buffers;
             map_pointer end = mid + n;
 
-            create_buffer(mid, end - 1);
-            for (auto cur = begin, tmp = _begin.node; cur != mid && tmp != _end.node; cur++, tmp++) {
+            for (auto cur = begin, tmp = _begin.node; cur != mid; cur++, tmp++) {
                 *cur = *tmp;
             }
+            create_buffer(mid, end - 1);
             map_allocator::deallocate(_map, _size);
             _map = new_map;
             _size = new_map_size;
@@ -591,7 +594,7 @@ namespace MyTinySTL
             }
             if (!front && static_cast<size_type>(_end.last - _end.cur - 1) < n) {
                 const size_type need_buffer = (n - (_end.last - _end.cur - 1))/ _buf_size + 1;
-                if (need_buffer > static_cast<size_type>(_map + _size - _end.node - 1)) {
+                if (need_buffer > static_cast<size_type>((_map + _size) - _end.node - 1)) {
                     realloc_at_back(need_buffer);
                     return;
                 }

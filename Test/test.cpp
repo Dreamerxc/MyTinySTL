@@ -19,12 +19,12 @@ int main()
 {
     using namespace MyTinySTL::test;
 
-       vector_test();
-       list_test();
-       deque_test();
-       rb_tree_test();
-       stack_test();
-       queue_test();
-       map_test();
-       set_test();
+       //vector_test();
+       //list_test();
+       //deque_test();
+       //rb_tree_test();
+       //stack_test();
+       //queue_test();
+       //map_test();
+         set_test();
 }

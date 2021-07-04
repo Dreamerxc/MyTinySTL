@@ -124,6 +124,7 @@ namespace MyTinySTL
 
         bool empty() { return tree_.empty(); }
         size_type size() { return tree_.size(); }
+        size_type max_size() const  { return tree_.max_size(); }
 
         mapped_type& at(const key_type& key) {
             auto it = lower_bound(key);
@@ -157,7 +158,7 @@ namespace MyTinySTL
 
         template <class ...Args>
         std::pair<iterator, bool> emplace(Args&& ...args) {
-            return tree_.emplace_unique(MyTinySTL::forward(args)...);
+            return tree_.emplace_unique(MyTinySTL::forward<Args>(args)...);
         }
 
         template <class ...Args>
@@ -188,7 +189,7 @@ namespace MyTinySTL
             tree_.insert_unique(first, last);
         }
 
-        void erase(iterator pos) { return tree_.erase(pos); }
+        void erase(iterator pos) { tree_.erase(pos); }
         size_type erase(const key_type& key)           { return tree_.erase_unique(key); }
         void      erase(iterator first, iterator last) { tree_.erase(first, last); }
 

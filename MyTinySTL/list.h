@@ -273,6 +273,9 @@ namespace  MyTinySTL
         const_reference back() const
         { return *(--end()); }
 
+        size_type max_size() const noexcept
+        { return static_cast<size_type>(-1); }
+
     public:
         void assign(size_type n, const value_type& value);
 
@@ -291,7 +294,6 @@ namespace  MyTinySTL
         }
 
         void insert(const_iterator pos, const value_type&& value) {
-            std::cout << "右值" << value << std::endl;
             node_ptr node = create_node(MyTinySTL::move(value));
             _size++;
             link_list_at_pos(pos._node, node, node);

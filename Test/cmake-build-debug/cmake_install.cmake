@@ -1,4 +1,4 @@
-# Install script for directory: C:/extralfiles/github/Review-tree/MyTinySTL/Test
+# Install script for directory: C:/extralfiles/github/MyTinySTL/Test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/extralfiles/github/Review-tree/MyTinySTL/Test/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/extralfiles/github/MyTinySTL/Test/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

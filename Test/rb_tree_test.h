@@ -18,11 +18,11 @@ void rbtree_print(MyTinySTL::rb_tree<int, std::less<int>> s)
 }
 
 // stack 的遍历输出
-#define Print_rbtree(t,s) do {                       \
-    std::string s_name = #s;                     \
-    std::cout << t << " " << s_name << " :";          \
+#define Print_Rbtree(t,s) do {                       \
+    std::cout << t << " " ;          \
     rbtree_print(s);                              \
 } while(0)
+
 namespace MyTinySTL
 {
     namespace test {
@@ -31,35 +31,62 @@ namespace MyTinySTL
             std::cout << "========= rb_tree test ============\n";
             std::cout << "==================================\n";
 
-            /*rb_tree<int, std::less<int>> tree1;
+            rb_tree<int, std::less<int>> tree1;
             rb_tree<int, std::less<int>> tree2(tree1);
             rb_tree<int, std::less<int>> tree3(MyTinySTL::move(tree1));
 
             tree2 = tree1;
             tree3 = MyTinySTL::move(tree2);
 
-            tree1.emplace_multi(2);
-            tree1.emplace_multi(3);
-            tree1.emplace_multi(1);
+            tree3.emplace_multi(2);
+            tree3.emplace_multi(3);
+            tree3.emplace_multi(1);
+            tree3.emplace_multi(1);
+            Print_Rbtree("after emplace some elems: ", tree3);
+            std::cout << "tree3 size(): " << tree3.size() << std::endl;
 
-            tree1.emplace_multi_at_pos(tree1.begin(), 4);
-            tree1.insert_multi(6);
-            tree1.erase(tree1.begin());
-            tree1.erase(tree1.begin());
+            tree3.emplace_multi_at_pos(tree3.begin(), 4);
+            tree3.emplace_multi_at_pos(tree3.begin(), 3);
+            Print_Rbtree("after emplace some elems at begin(): ", tree3);
 
-            auto it = tree1.find(2);
-            if (it != tree1.end()) {
+            tree3.insert_multi(6);
+            Print_Rbtree("after insert value: ", tree3);
+
+            tree3.erase(tree3.begin());
+            tree3.erase(tree3.begin());
+
+            Print_Rbtree("after erase two elems: ", tree3);
+
+            auto it = tree3.find(2);
+            if (it != tree3.end()) {
                 std::cout << "find value: " << *it << std::endl;
             }
-            rbtree_print(tree1);*/
 
-            rb_tree<int, std::less<int>> tree2;
-            tree2.emplace_unique(2);
-            tree2.emplace_unique(3);
-            tree2.emplace_unique(1);
-            tree2.emplace_unique(1);
-            tree2.emplace_unique_at_pos(tree2.begin(), 4);
-            rbtree_print(tree2);
+            tree3.clear();
+            Print_Rbtree("after clear: ", tree3);
+            std::cout << "tree3 size: " << tree3.size() << std::endl;
+
+            std::cout << "==================================\n";
+            tree3.emplace_unique(2);
+            tree3.emplace_unique(3);
+            tree3.emplace_unique(1);
+            tree3.emplace_unique(1);
+            Print_Rbtree("after emplace unique some elems: ", tree3);
+            std::cout << "tree3 size(): " << tree3.size() << std::endl;
+
+            tree3.emplace_unique_at_pos(tree3.begin(), 4);
+            tree3.emplace_unique_at_pos(tree3.begin(), 3);
+            Print_Rbtree("after emplace unique some elems at begin(): ", tree3);
+
+            tree3.insert_unique(3);
+            Print_Rbtree("after insert unique value: ", tree3);
+
+            tree3.insert_unique(5);
+            Print_Rbtree("after insert unique value: ", tree3);
+
+            tree3.erase(tree3.begin());
+            tree3.erase(tree3.begin());
+            Print_Rbtree("after erase two elems: ", tree3);
         }
     }
 }
