@@ -11,6 +11,7 @@
 #include "iterator.h"
 #include "allocator.h"
 #include "memory.h"
+#include <list>
 
 namespace  MyTinySTL
 {

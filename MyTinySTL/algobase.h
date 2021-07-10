@@ -12,6 +12,7 @@
 #include "util.h"
 #include <cstring>
 #include <utility>
+#include <iostream>
 namespace MyTinySTL
 {
     /*****************************************************/
@@ -49,6 +50,7 @@ namespace MyTinySTL
        std::is_trivially_copy_assignable<Up>::value, Up*>::type
        unchecked_copy(Tp* first, Tp* last, Up* result){
             const auto n = static_cast<size_t> (last - first);
+            std::cout << "采用memmove函数" << std::endl;
             if (n != 0){
                 std::memmove(result, first, n*sizeof(Up));
             }
@@ -166,12 +168,13 @@ namespace MyTinySTL
     // 为one-byte提供特化版本
     template <class Tp, class Size, class Up>
     typename std::enable_if<
-            std::is_integral<Tp>::value && sizeof(Tp) == 1 &&
+            !std::is_integral<Tp>::value && sizeof(Tp) == 1 &&
                     !std::is_same<Tp, bool>::value &&
                     std::is_integral<Up>::value && sizeof(Up) == 1,
             Tp*>::type
      unchecked_fill_n(Tp* first, Size n, Up value)
     {
+         std::cout << "use one byte!" << std::endl;
          if (n > 0)
          {
              std::memset(first, (unsigned char)value, (size_t)(n));

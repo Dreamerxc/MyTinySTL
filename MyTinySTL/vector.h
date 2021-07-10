@@ -111,7 +111,7 @@ namespace MyTinySTL{
         template <class Iter>
         void range_init(Iter first, Iter second);
 
-        void init_space(size_type size, value_type cap);
+        void init_space(size_type size, const size_type& cap);
 
         void destroy_and_recover(iterator first, iterator last, size_type n);
 
@@ -134,11 +134,13 @@ namespace MyTinySTL{
         void copy_insert(iterator pos, Iter first, Iter last);
     public:
         iterator begin() noexcept
-        { return begin_; }
+        {   std::cout << "begin:"<< begin_ << std::endl;
+            return begin_; }
         iterator begin() const noexcept
         { return begin_; }
         iterator end() noexcept
-        { return end_;   }
+        { std::cout << "end:" << end_ <<std::endl;
+            return end_;   }
         iterator end() const noexcept
         { return end_;   }
 
@@ -295,7 +297,7 @@ namespace MyTinySTL{
     }
 
     template <class T>
-    void vector<T>::init_space(size_type size, value_type cap) {
+    void vector<T>::init_space(size_type size, const size_type& cap) {
         try{
             begin_ = data_allocator::allocate(cap);
             end_ = begin_ + size;

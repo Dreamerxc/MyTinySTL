@@ -53,6 +53,8 @@ cstring
 -
 utility
 -
+iostream
+-
 
 C:/extralfiles/github/MyTinySTL/MyTinySTL/allocator.h
 construct.h
@@ -85,6 +87,8 @@ cstddef
 -
 type_traits.h
 C:/extralfiles/github/MyTinySTL/MyTinySTL/type_traits.h
+iostream
+-
 
 C:/extralfiles/github/MyTinySTL/MyTinySTL/list.h
 util.h
@@ -231,4 +235,6 @@ C:/extralfiles/github/MyTinySTL/Test/vector_test.h
 C:/extralfiles/github/MyTinySTL/MyTinySTL/vector.h
 test.h
 C:/extralfiles/github/MyTinySTL/Test/test.h
+vector
+-
 

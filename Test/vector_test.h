@@ -10,20 +10,23 @@
 #pragma once
 #include "../MyTinySTL/vector.h"
 #include "test.h"
-
+#include <vector>
 namespace MyTinySTL
 {
     namespace test
     {
+        class test{
+        private:
+            int a;
+        };
         void vector_test()
         {
             std::cout<< "==================================\n";
             std::cout<< "========= vector test ============\n";
             std::cout<< "==================================\n";
-            std::cout<< int() << std::endl;
             int a[] = {1,2,3,4,5};
             // 测试构造函数
-            std::cout<< " 构造函数测试："<<std::endl;
+           /* std::cout<< " 构造函数测试："<<std::endl;
             MyTinySTL::vector<int> v1;
             MyTinySTL::vector<int> v2(10);
             Print_Vector(v2);
@@ -98,7 +101,7 @@ namespace MyTinySTL
             std::cout << "\n";
             std::cout << "|---------------------|-------------|-------------|-------------|\n";
             PASSED;
-#endif
+#endif*/
         }
     }
 }
